@@ -1,0 +1,796 @@
+<!DOCTYPE html>
+<html lang="es">
+    
+    <!-- Configuración de la pagina -->
+    
+<head>
+    
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HazardGame | Tienda Gamer</title>
+    <link rel="stylesheet" href="tienda.css">
+    <link rel="icon" type="image/png" href="img/logo.png">
+    <script src="carrito.js" defer></script>
+    
+</head>
+
+<body id="inicio">
+
+    <header class="encabezado">
+        <a href="index.html" class="logo" aria-label="HazardGame - Inicio">
+            <img src="img/icono.png" alt="HazardGame" class="logo-icono">
+        </a>
+
+        <nav class="menu" aria-label="Navegación principal">
+            <a href="index.html">Inicio</a>
+            <a href="tienda.html" class="activo">Tienda</a>
+            <a href="contacto.html">Contacto</a>
+        </nav>
+
+        <form class="buscador" action="tienda.html" method="get">
+            <button type="submit" aria-label="Buscar juegos">⌕</button>
+            <input type="search" name="buscar" placeholder="Buscar juegos..." aria-label="Buscar juegos">
+        </form>
+
+        <a href="inicio-sesion.html" class="sesion">
+            <span class="icono-usuario" aria-hidden="true">♙</span>
+            <span>Iniciar sesión</span>
+        </a>
+
+        <a href="carrito.html" class="carrito" aria-label="Ver carrito">
+            <span class="icono-carrito">🛒</span>
+            <span class="contador" id="contador-carrito">0</span>
+        </a>
+    </header>
+
+    <main>
+
+        <section class="banner">
+            <img src="img/ofertas.jpg" alt="Ofertas">
+
+            <img src="img/shop.png" alt="Juegos destacados" class="banner-centro">
+
+            <img src="img/increibles.jpg" alt="Juegos increíbles">
+        </section>
+
+        <section class="tienda" id="catalogo">
+
+            <aside class="categorias">
+                <h2>Filtrar juegos</h2>
+                <p class="ayuda-filtros">Encuentra tu próximo juego favorito.</p>
+
+                <input type="radio" name="filtro" id="todos" checked>
+                <input type="radio" name="filtro" id="ofertas">
+                <input type="radio" name="filtro" id="recientes">
+                <input type="radio" name="filtro" id="populares">
+                <input type="radio" name="filtro" id="xbox">
+                <input type="radio" name="filtro" id="playstation">
+                <input type="radio" name="filtro" id="switch">
+
+                <div class="lista-filtros">
+                    <label for="todos">Todos los juegos</label>
+                    <label for="ofertas">Ofertas</label>
+                    <label for="recientes">Juegos recientes</label>
+                    <label for="populares">Juegos populares</label>
+                </div>
+
+                <div class="separador"></div>
+
+                <h3>Plataformas</h3>
+
+                <div class="lista-filtros">
+                    <label for="xbox">Xbox</label>
+                    <label for="playstation">PlayStation 5</label>
+                    <label for="switch">Nintendo Switch</label>
+                </div>
+
+                <div class="nota-categorias">
+                    <strong>Compra con confianza</strong>
+                    <p>Explora el catálogo y encuentra tu próximo videojuego favorito.</p>
+                </div>
+            </aside>
+
+            <div class="contenido-tienda">
+
+                <div class="titulo-tienda">
+                    <div>
+                        <h1>Tienda</h1>
+                        <p>Videojuegos físicos para tus plataformas favoritas.</p>
+                    </div>
+                    <span class="total">19 títulos</span>
+                </div>
+
+                <div class="productos">
+
+                    <article class="producto popular plataforma-ps5">
+                        <a href="#info-marvel" class="enlace-detalle">
+                            <div class="imagen-producto">
+                                <img src="img/marvel.jpg" alt="Marvel's Spider-Man 2">
+                                <span class="descuento">-40%</span>
+                            </div>
+                            <h3>Marvel's Spider-Man 2</h3>
+                        </a>
+                        <div class="info-producto">
+                            <span class="plataforma">PlayStation 5</span>
+                            <p class="descripcion">Acción y aventura</p>
+                            <div class="precios">
+                                <del>$299.900</del>
+                                <strong>$179.900</strong>
+                            </div>
+                            <a 
+href="carrito.html" class="boton-producto agregar-carrito" data-id="spiderman2" data-nombre="Marvel's Spider-Man 2" data-precio="179900" data-imagen="img/marvel.jpg" data-plataforma="PlayStation 5">Agregar al carrito</a>
+                        </div>
+                    </article>
+
+                    <article class="producto popular plataforma-switch">
+                        <a href="#info-zelda" class="enlace-detalle">
+                            <div class="imagen-producto">
+                                <img src="img/zelda.jpg" alt="The Legend of Zelda: Tears of the Kingdom">
+                                <span class="descuento">-32%</span>
+                            </div>
+                            <h3>The Legend of Zelda: Tears of the Kingdom</h3>
+                        </a>
+                        <div class="info-producto">
+                            <span class="plataforma">Nintendo Switch</span>
+                            <p class="descripcion">Aventura y exploración</p>
+                            <div class="precios">
+                                <del>$299.900</del>
+                                <strong>$203.900</strong>
+                            </div>
+                            <a 
+                             href="carrito.html" class="boton-producto agregar-carrito" data-id="zelda-totk" data-nombre="The Legend of Zelda: Tears of the Kingdom" data-precio="203900" data-imagen="img/zelda.jpg" data-plataforma="Nintendo Switch">Agregar al carrito</a>
+                        </div>
+                    </article>
+
+                    <article class="producto oferta plataforma-xbox">
+                        <a href="#info-starfield" class="enlace-detalle">
+                            <div class="imagen-producto">
+                                <img src="img/star.jpg" alt="Starfield">
+                                <span class="descuento">-25%</span>
+                            </div>
+                            <h3>Starfield</h3>
+                        </a>
+                        <div class="info-producto">
+                            <span class="plataforma">Xbox</span>
+                            <p class="descripcion">Rol y ciencia ficción</p>
+                            <div class="precios">
+                                <del>$249.900</del>
+                                <strong>$187.900</strong>
+                            </div>
+                            <a  href="carrito.html" class="boton-producto agregar-carrito" data-id="starfield" data-nombre="Starfield" data-precio="187900" data-imagen="img/star.jpg" data-plataforma="Xbox">Agregar al carrito</a>
+                        </div>
+                    </article>
+
+                    <article class="producto popular oferta plataforma-ps5">
+                        <a href="#info-fantasy" class="enlace-detalle">
+                            <div class="imagen-producto">
+                                <img src="img/fantasy.jpg" alt="Final Fantasy XVI">
+                                <span class="descuento">-25%</span>
+                            </div>
+                            <h3>Final Fantasy XVI</h3>
+                        </a>
+                        <div class="info-producto">
+                            <span class="plataforma">PlayStation 5</span>
+                            <p class="descripcion">Rol y fantasía</p>
+                            <div class="precios">
+                                <del>$279.900</del>
+                                <strong>$209.900</strong>
+                            </div>
+                            <a  href="carrito.html" class="boton-producto agregar-carrito" data-id="final-fantasy-xvi" data-nombre="Final Fantasy XVI" data-precio="209900" data-imagen="img/fantasy.jpg" data-plataforma="PlayStation 5">Agregar al carrito</a>
+                        </div>
+                    </article>
+                    
+                      <article class="producto popular oferta plataforma-xbox">
+                        <a href="#info-forza" class="enlace-detalle">
+                            <div class="imagen-producto">
+                                <img src="img/forza.jpg" alt="Forza Horizon 5">
+                                <span class="descuento">-30%</span>
+                            </div>
+                            <h3>Forza Horizon 5</h3>
+                        </a>
+                        <div class="info-producto">
+                            <span class="plataforma">Xbox</span>
+                            <p class="descripcion">Carreras y mundo abierto</p>
+                            <div class="precios">
+                                <del>$269.900</del>
+                                <strong>$188.900</strong>
+                            </div>
+                            <a  href="carrito.html" class="boton-producto agregar-carrito" data-id="forza-horizon-5" data-nombre="Forza Horizon 5" data-precio="188900" data-imagen="img/forza.jpg" data-plataforma="Xbox">Agregar al carrito</a>
+                        </div>
+                    </article>
+
+                    <article class="producto popular oferta plataforma-ps5">
+                        <a href="#info-god" class="enlace-detalle">
+                            <div class="imagen-producto">
+                                <img src="img/god.jpg" alt="God of War Ragnarök">
+                                <span class="descuento">-22%</span>
+                            </div>
+                            <h3>God of War Ragnarök</h3>
+                        </a>
+                        <div class="info-producto">
+                            <span class="plataforma">PlayStation 5</span>
+                            <p class="descripcion">Acción y aventura</p>
+                            <div class="precios">
+                                <del>$289.900</del>
+                                <strong>$225.900</strong>
+                            </div>
+                            <a  href="carrito.html" class="boton-producto agregar-carrito" data-id="god-of-war-ragnarok" data-nombre="God of War Ragnarök" data-precio="225900" data-imagen="img/god.jpg" data-plataforma="PlayStation 5">Agregar al carrito</a>
+                        </div>
+                    </article>
+
+                    <article class="producto popular oferta plataforma-switch">
+                        <a href="#info-mario" class="enlace-detalle">
+                            <div class="imagen-producto">
+                                <img src="img/mario.jpg" alt="Super Mario Bros. Wonder">
+                                <span class="descuento">-40%</span>
+                            </div>
+                            <h3>Super Mario Bros. Wonder</h3>
+                        </a>
+                        <div class="info-producto">
+                            <span class="plataforma">Nintendo Switch</span>
+                            <p class="descripcion">Plataformas</p>
+                            <div class="precios">
+                                <del>$249.900</del>
+                                <strong>$149.900</strong>
+                            </div>
+                            <a  href="carrito.html" class="boton-producto agregar-carrito" data-id="mario-wonder" data-nombre="Super Mario Bros. Wonder" data-precio="149900" data-imagen="img/mario.jpg" data-plataforma="Nintendo Switch">Agregar al carrito</a>
+                        </div>
+                    </article>
+
+                    <article class="producto oferta plataforma-ps5">
+                        <a href="#info-horizon" class="enlace-detalle">
+                            <div class="imagen-producto">
+                                <img src="img/horizon.jpg" alt="Horizon Forbidden West">
+                                <span class="descuento">-20%</span>
+                            </div>
+                            <h3>Horizon Forbidden West</h3>
+                        </a>
+                        <div class="info-producto">
+                            <span class="plataforma">PlayStation 5</span>
+                            <p class="descripcion">Acción y aventura</p>
+                            <div class="precios">
+                                <del>$269.900</del>
+                                <strong>$215.900</strong>
+                            </div>
+                            <a  href="carrito.html" class="boton-producto agregar-carrito" data-id="horizon-forbidden-west" data-nombre="Horizon Forbidden West" data-precio="215900" data-imagen="img/horizon.jpg" data-plataforma="PlayStation 5">Agregar al carrito</a>
+                        </div>
+                    </article>
+
+                    <article class="producto popular oferta plataforma-xbox">
+                        <a href="#info-legacy" class="enlace-detalle">
+                            <div class="imagen-producto">
+                                <img src="img/legacy.jpg" alt="Hogwarts Legacy">
+                                <span class="descuento">-24%</span>
+                            </div>
+                            <h3>Hogwarts Legacy</h3>
+                        </a>
+                        <div class="info-producto">
+                            <span class="plataforma">Xbox</span>
+                            <p class="descripcion">Rol y aventura</p>
+                            <div class="precios">
+                                <del>$249.900</del>
+                                <strong>$189.900</strong>
+                            </div>
+                            <a  href="carrito.html" class="boton-producto agregar-carrito" data-id="hogwarts-legacy" data-nombre="Hogwarts Legacy" data-precio="189900" data-imagen="img/legacy.jpg" data-plataforma="Xbox">Agregar al carrito</a>
+                        </div>
+                    </article>
+
+                    <article class="producto popular oferta plataforma-ps5">
+                        <a href="#info-evil" class="enlace-detalle">
+                            <div class="imagen-producto">
+                                <img src="img/evil.jpg" alt="Resident Evil 4">
+                                <span class="descuento">-80%</span>
+                            </div>
+                            <h3>Resident Evil 4</h3>
+                        </a>
+                        <div class="info-producto">
+                            <span class="plataforma">PlayStation 5</span>
+                            <p class="descripcion">Terror y supervivencia</p>
+                            <div class="precios">
+                                <del>$229.900</del>
+                                <strong>$45.900</strong>
+                            </div>
+                            <a  href="carrito.html" class="boton-producto agregar-carrito" data-id="resident-evil-4" data-nombre="Resident Evil 4" data-precio="45900" data-imagen="img/evil.jpg" data-plataforma="PlayStation 5">Agregar al carrito</a>
+                        </div>
+                    </article>
+
+                    <article class="producto reciente popular plataforma-ps5">
+                        <a href="#info-fc26" class="enlace-detalle">
+                            <div class="imagen-producto">
+                                <img src="img/fc26.jpg" alt="EA Sports FC 26">
+                                <span class="nuevo">Nuevo</span>
+                            </div>
+                            <h3>EA Sports FC 26</h3>
+                        </a>
+                        <div class="info-producto">
+                            <span class="plataforma">PlayStation 5</span>
+                            <p class="descripcion">Deportes</p>
+                            <div class="precios">
+                                <strong>$279.900</strong>
+                            </div>
+                            <a  href="carrito.html" class="boton-producto agregar-carrito" data-id="fc26" data-nombre="EA Sports FC 26" data-precio="279900" data-imagen="img/fc26.jpg" data-plataforma="PlayStation 5">Agregar al carrito</a>
+                        </div>
+                    </article>
+
+                    <article class="producto reciente popular plataforma-xbox">
+                        <a href="#info-ops7" class="enlace-detalle">
+                            <div class="imagen-producto">
+                                <img src="img/ops7.jpg" alt="Call of Duty Black Ops 7">
+                                <span class="nuevo">Nuevo</span>
+                            </div>
+                            <h3>Call of Duty: Black Ops 7</h3>
+                        </a>
+                        <div class="info-producto">
+                            <span class="plataforma">Xbox</span>
+                            <p class="descripcion">Acción y disparos</p>
+                            <div class="precios">
+                                <strong>$299.900</strong>
+                            </div>
+                            <a  href="carrito.html" class="boton-producto agregar-carrito" data-id="black-ops-7" data-nombre="Call of Duty: Black Ops 7" data-precio="299900" data-imagen="img/ops7.jpg" data-plataforma="Xbox">Agregar al carrito</a>
+                        </div>
+                    </article>
+
+                    <article class="producto reciente popular plataforma-switch">
+                        <a href="#info-donkey" class="enlace-detalle">
+                            <div class="imagen-producto">
+                                <img src="img/donkey.jpg" alt="Donkey Kong Bananza">
+                                <span class="nuevo">Nuevo</span>
+                            </div>
+                            <h3>Donkey Kong Bananza</h3>
+                        </a>
+                        <div class="info-producto">
+                            <span class="plataforma">Nintendo Switch</span>
+                            <p class="descripcion">Plataformas y aventura</p>
+                            <div class="precios">
+                                <strong>$259.900</strong>
+                            </div> 
+                         <a           <a href="carrito.html" class="boton-producto agregar-carrito" data-id="donkey-kong-bananza" data-nombre="Donkey Kong Bananza" data-precio="259900" data-imagen="img/donkey.jpg" data-plataforma="Nintendo Switch">Agregar al carrito</a>
+                        </div>
+                    </article>
+
+                    <article class="producto popular oferta plataforma-ps5">
+                        <a href="#info-bot" class="enlace-detalle">
+                            <div class="imagen-producto">
+                                <img src="img/bot.jpg" alt="Astro Bot">
+                                <span class="descuento">-20%</span>
+                            </div>
+                            <h3>Astro Bot</h3>
+                        </a>
+                        <div class="info-producto">
+                            <span class="plataforma">PlayStation 5</span>
+                            <p class="descripcion">Plataformas y aventura</p>
+                            <div class="precios">
+                                <del>$249.900</del>
+                                <strong>$199.900</strong>
+                            </div>
+                            <a  href="carrito.html" class="boton-producto agregar-carrito" data-id="astro-bot" data-nombre="Astro Bot" data-precio="199900" data-imagen="img/bot.jpg" data-plataforma="PlayStation 5">Agregar al carrito</a>
+                        </div>
+                    </article>
+                  
+                  <article class="producto popular plataforma-switch">
+                        <a href="#info-minecraft" class="enlace-detalle">
+                            <div class="imagen-producto">
+                                <img src="img/minecraft.jpg" alt="Minecraft">
+                            </div>
+                            <h3>Minecraft</h3>
+                        </a>
+                        <div class="info-producto">
+                            <span class="plataforma">Nintendo Switch</span>
+                            <p class="descripcion">Creatividad y aventura</p>
+                            <div class="precios">
+                                <strong>$119.900</strong>
+                            </div>
+                            <a  href="carrito.html" class="boton-producto agregar-carrito" data-id="minecraft" data-nombre="Minecraft" data-precio="119900" data-imagen="img/minecraft.jpg" data-plataforma="Nintendo Switch">Agregar al carrito</a>
+                        </div>
+                    </article>
+
+                    <article class="producto reciente popular plataforma-switch">
+                        <a href="#info-pokemon" class="enlace-detalle">
+                            <div class="imagen-producto">
+                                <img src="img/pokemon.jpg" alt="Pokémon Legends Z-A">
+                                <span class="nuevo">Nuevo</span>
+                            </div>
+                            <h3>Pokémon Legends: Z-A</h3>
+                        </a>
+                        <div class="info-producto">
+                            <span class="plataforma">Nintendo Switch</span>
+                            <p class="descripcion">Rol y aventura</p>
+                            <div class="precios">
+                                <strong>$249.900</strong>
+                            </div>
+                            <a  href="carrito.html" class="boton-producto agregar-carrito" data-id="pokemon-legends-za" data-nombre="Pokémon Legends: Z-A" data-precio="249900" data-imagen="img/pokemon.jpg" data-plataforma="Nintendo Switch">Agregar al carrito</a>
+                        </div>
+                    </article>
+
+                    <article class="producto oferta plataforma-ps5">
+                        <a href="#info-hill2" class="enlace-detalle">
+                            <div class="imagen-producto">
+                                <img src="img/hill2.jpg" alt="Silent Hill 2">
+                                <span class="descuento">-21%</span>
+                            </div>
+                            <h3>Silent Hill 2</h3>
+                        </a>
+                        <div class="info-producto">
+                            <span class="plataforma">PlayStation 5</span>
+                            <p class="descripcion">Terror y supervivencia</p>
+                            <div class="precios">
+                                <del>$239.900</del>
+                                <strong>$189.900</strong>
+                            </div>
+                            <a  href="carrito.html" class="boton-producto agregar-carrito" data-id="silent-hill-2" data-nombre="Silent Hill 2" data-precio="189900" data-imagen="img/hill2.jpg" data-plataforma="PlayStation 5">Agregar al carrito</a>
+                        </div>
+                    </article>
+
+                    <article class="producto reciente popular plataforma-switch">
+                        <a href="#info-sonic" class="enlace-detalle">
+                            <div class="imagen-producto">
+                                <img src="img/sonic.jpg" alt="Sonic X Shadow Generations">
+                            </div>
+                            <h3>Sonic X Shadow Generations</h3>
+                        </a>
+                        <div class="info-producto">
+                            <span class="plataforma">Nintendo Switch</span>
+                            <p class="descripcion">Acción y plataformas</p>
+                            <div class="precios">
+                                <del>$199.900</del>
+                                <strong>$159.900</strong>
+                            </div>
+                            <a  href="carrito.html" class="boton-producto agregar-carrito" data-id="sonic-shadow-generations" data-nombre="Sonic X Shadow Generations" data-precio="159900" data-imagen="img/sonic.jpg" data-plataforma="Nintendo Switch">Agregar al carrito</a>
+                        </div>
+                    </article>
+
+                    <article class="producto oferta plataforma-xbox">
+                        <a href="#info-cyberpunk" class="enlace-detalle">
+                            <div class="imagen-producto">
+                                <img src="img/cyberpunk.jpg" alt="Cyberpunk 2077">
+                            </div>
+                            <h3>Cyberpunk 2077</h3>
+                        </a>
+                        <div class="info-producto">
+                            <span class="plataforma">Xbox</span>
+                            <p class="descripcion">Rol y mundo abierto</p>
+                            <div class="precios">
+                                <del>$219.900</del>
+                                <strong>$169.900</strong>
+                            </div>
+                            <a  href="carrito.html" class="boton-producto agregar-carrito" data-id="cyberpunk-2077" data-nombre="Cyberpunk 2077" data-precio="169900" data-imagen="img/cyberpunk.jpg" data-plataforma="Xbox">Agregar al carrito</a>
+                        </div>
+                    </article>
+
+                </div>
+            </div>
+        </section>
+
+        <section class="ventana-juego" id="info-marvel">
+            <a class="fondo-ventana" href="#catalogo" aria-label="Cerrar ventana"></a>
+            <article class="contenido-ventana">
+                <a class="cerrar-ventana" href="#catalogo" aria-label="Cerrar">×</a>
+                <img src="img/marvel.jpg" alt="Marvel's Spider-Man 2">
+                <div>
+                    <span class="etiqueta-plataforma">PlayStation 5</span>
+                    <h2>Marvel's Spider-Man 2</h2>
+                    <p class="precio-ventana">$179.900 <del>$299.900</del></p>
+                    <p>Vive una aventura de acción con Peter Parker y Miles Morales mientras protegen Nueva York de nuevas amenazas.</p>
+                    <p><strong>Género:</strong> Acción y aventura.</p>
+                    <a href="https://www.youtube.com/results?search_query=Marvel+Spider-Man+2+trailer+oficial" target="_blank" rel="noopener noreferrer" class="enlace-trailer">Ver tráiler del juego</a>
+                    <a href="carrito.html" class="boton-producto agregar-carrito" data-id="spiderman2" data-nombre="Marvel's Spider-Man 2" data-precio="179900" data-imagen="img/marvel.jpg" data-plataforma="PlayStation 5">Agregar al carrito</a>
+                </div>
+            </article>
+        </section>
+        
+          <section class="ventana-juego" id="info-zelda">
+            <a class="fondo-ventana" href="#catalogo" aria-label="Cerrar ventana"></a>
+            <article class="contenido-ventana">
+                <a class="cerrar-ventana" href="#catalogo" aria-label="Cerrar">×</a>
+                <img src="img/zelda.jpg" alt="The Legend of Zelda: Tears of the Kingdom">
+                <div>
+                    <span class="etiqueta-plataforma">Nintendo Switch</span>
+                    <h2>The Legend of Zelda: Tears of the Kingdom</h2>
+                    <p class="precio-ventana">$203.900 <del>$299.900</del></p>
+                    <p>Explora Hyrule, descubre islas en el cielo y utiliza nuevas habilidades para resolver desafíos y combatir enemigos.</p>
+                    <p><strong>Género:</strong> Aventura y exploración.</p>
+                    <a href="https://www.youtube.com/results?search_query=Zelda+Tears+of+the+Kingdom+trailer+oficial" target="_blank" rel="noopener noreferrer" class="enlace-trailer">Ver tráiler del juego</a>
+                    <a href="carrito.html" class="boton-producto agregar-carrito" data-id="zelda-totk" data-nombre="The Legend of Zelda: Tears of the Kingdom" data-precio="203900" data-imagen="img/zelda.jpg" data-plataforma="Nintendo Switch">Agregar al carrito</a>
+                </div>
+            </article>
+        </section>
+
+        <section class="ventana-juego" id="info-starfield">
+            <a class="fondo-ventana" href="#catalogo" aria-label="Cerrar ventana"></a>
+            <article class="contenido-ventana">
+                <a class="cerrar-ventana" href="#catalogo" aria-label="Cerrar">×</a>
+                <img src="img/star.jpg" alt="Starfield">
+                <div>
+                    <span class="etiqueta-plataforma">Xbox</span>
+                    <h2>Starfield</h2>
+                    <p class="precio-ventana">$187.900 <del>$249.900</del></p>
+                    <p>Viaja por el espacio, explora planetas y descubre los misterios de una aventura de ciencia ficción.</p>
+                    <p><strong>Género:</strong> Rol y ciencia ficción.</p>
+                    <a href="https://www.youtube.com/results?search_query=Starfield+trailer+oficial" target="_blank" rel="noopener noreferrer" class="enlace-trailer">Ver tráiler del juego</a>
+                    <a href="carrito.html" class="boton-producto agregar-carrito" data-id="starfield" data-nombre="Starfield" data-precio="187900" data-imagen="img/star.jpg" data-plataforma="Xbox">Agregar al carrito</a>
+                </div>
+            </article>
+        </section>
+
+        <section class="ventana-juego" id="info-fantasy">
+            <a class="fondo-ventana" href="#catalogo" aria-label="Cerrar ventana"></a>
+            <article class="contenido-ventana">
+                <a class="cerrar-ventana" href="#catalogo" aria-label="Cerrar">×</a>
+                <img src="img/fantasy.jpg" alt="Final Fantasy XVI">
+                <div>
+                    <span class="etiqueta-plataforma">PlayStation 5</span>
+                    <h2>Final Fantasy XVI</h2>
+                    <p class="precio-ventana">$209.900 <del>$279.900</del></p>
+                    <p>Adéntrate en una aventura de fantasía con combates intensos, criaturas poderosas y una historia épica.</p>
+                    <p><strong>Género:</strong> Rol y fantasía.</p>
+                    <a href="https://www.youtube.com/results?search_query=Final+Fantasy+XVI+trailer+oficial" target="_blank" rel="noopener noreferrer" class="enlace-trailer">Ver tráiler del juego</a>
+                   <a href="carrito.html" class="boton-producto agregar-carrito" data-id="final-fantasy-xvi" data-nombre="Final Fantasy XVI" data-precio="209900" data-imagen="img/fantasy.jpg" data-plataforma="PlayStation 5">Agregar al carrito</a>
+                </div>
+            </article>
+        </section>
+
+        <section class="ventana-juego" id="info-forza">
+            <a class="fondo-ventana" href="#catalogo" aria-label="Cerrar ventana"></a>
+            <article class="contenido-ventana">
+                <a class="cerrar-ventana" href="#catalogo" aria-label="Cerrar">×</a>
+                <img src="img/forza.jpg" alt="Forza Horizon 5">
+                <div>
+                    <span class="etiqueta-plataforma">Xbox</span>
+                    <h2>Forza Horizon 5</h2>
+                    <p class="precio-ventana">$188.900 <del>$269.900</del></p>
+                    <p>Conduce una gran variedad de vehículos en carreras y recorridos por paisajes de México.</p>
+                    <p><strong>Género:</strong> Carreras y mundo abierto.</p>
+                    <a href="https://www.youtube.com/results?search_query=Forza+Horizon+5+trailer+oficial" target="_blank" rel="noopener noreferrer" class="enlace-trailer">Ver tráiler del juego</a>
+                    <a href="carrito.html" class="boton-producto agregar-carrito" data-id="forza-horizon-5" data-nombre="Forza Horizon 5" data-precio="188900" data-imagen="img/forza.jpg" data-plataforma="Xbox">Agregar al carrito</a>
+                </div>
+            </article>
+        </section>
+
+        <section class="ventana-juego" id="info-god">
+            <a class="fondo-ventana" href="#catalogo" aria-label="Cerrar ventana"></a>
+            <article class="contenido-ventana">
+                <a class="cerrar-ventana" href="#catalogo" aria-label="Cerrar">×</a>
+                <img src="img/god.jpg" alt="God of War Ragnarök">
+                <div>
+                    <span class="etiqueta-plataforma">PlayStation 5</span>
+                    <h2>God of War Ragnarök</h2>
+                    <p class="precio-ventana">$225.900 <del>$289.900</del></p>
+                    <p>Acompaña a Kratos y Atreus en un viaje por los reinos nórdicos para enfrentar nuevos peligros.</p>
+                    <p><strong>Género:</strong> Acción y aventura.</p>
+                    <a href="https://www.youtube.com/results?search_query=God+of+War+Ragnarok+trailer+oficial" target="_blank" rel="noopener noreferrer" class="enlace-trailer">Ver tráiler del juego</a>
+                    <a href="carrito.html" class="boton-producto agregar-carrito" data-id="god-of-war-ragnarok" data-nombre="God of War Ragnarök" data-precio="225900" data-imagen="img/god.jpg" data-plataforma="PlayStation 5">Agregar al carrito</a>
+                </div>
+            </article>
+        </section>
+
+        <section class="ventana-juego" id="info-mario">
+            <a class="fondo-ventana" href="#catalogo" aria-label="Cerrar ventana"></a>
+            <article class="contenido-ventana">
+                <a class="cerrar-ventana" href="#catalogo" aria-label="Cerrar">×</a>
+                <img src="img/mario.jpg" alt="Super Mario Bros. Wonder">
+                <div>
+                    <span class="etiqueta-plataforma">Nintendo Switch</span>
+                    <h2>Super Mario Bros. Wonder</h2>
+                    <p class="precio-ventana">$149.900 <del>$249.900</del></p>
+                    <p>Explora mundos coloridos, supera obstáculos y descubre las sorpresas que transforman cada nivel.</p>
+                    <p><strong>Género:</strong> Plataformas.</p>
+                    <a href="https://www.youtube.com/results?search_query=Super+Mario+Bros+Wonder+trailer+oficial" target="_blank" rel="noopener noreferrer" class="enlace-trailer">Ver tráiler del juego</a>
+                    <a href="carrito.html" class="boton-producto agregar-carrito" data-id="mario-wonder" data-nombre="Super Mario Bros. Wonder" data-precio="149900" data-imagen="img/mario.jpg" data-plataforma="Nintendo Switch">Agregar al carrito</a>
+                </div>
+            </article>
+        </section>
+
+        <section class="ventana-juego" id="info-horizon">
+            <a class="fondo-ventana" href="#catalogo" aria-label="Cerrar ventana"></a>
+            <article class="contenido-ventana">
+                <a class="cerrar-ventana" href="#catalogo" aria-label="Cerrar">×</a>
+                <img src="img/horizon.jpg" alt="Horizon Forbidden West">
+                <div>
+                    <span class="etiqueta-plataforma">PlayStation 5</span>
+                    <h2>Horizon Forbidden West</h2>
+                    <p class="precio-ventana">$215.900 <del>$269.900</del></p>
+                    <p>Acompaña a Aloy en una aventura por territorios desconocidos llenos de máquinas y misterios.</p>
+                    <p><strong>Género:</strong> Acción y aventura.</p>
+                    <a href="https://www.youtube.com/results?search_query=Horizon+Forbidden+West+trailer+oficial" target="_blank" rel="noopener noreferrer" class="enlace-trailer">Ver tráiler del juego</a>
+                    <a href="carrito.html" class="boton-producto agregar-carrito" data-id="horizon-forbidden-west" data-nombre="Horizon Forbidden West" data-precio="215900" data-imagen="img/horizon.jpg" data-plataforma="PlayStation 5">Agregar al carrito</a>
+                </div>
+            </article>
+        </section>
+
+        <section class="ventana-juego" id="info-legacy">
+            <a class="fondo-ventana" href="#catalogo" aria-label="Cerrar ventana"></a>
+            <article class="contenido-ventana">
+                <a class="cerrar-ventana" href="#catalogo" aria-label="Cerrar">×</a>
+                <img src="img/legacy.jpg" alt="Hogwarts Legacy">
+                <div>
+                    <span class="etiqueta-plataforma">Xbox</span>
+                    <h2>Hogwarts Legacy</h2>
+                    <p class="precio-ventana">$189.900 <del>$249.900</del></p>
+                    <p>Descubre un mundo mágico, aprende hechizos y vive una aventura en el universo de Hogwarts.</p>
+                    <p><strong>Género:</strong> Rol y aventura.</p>
+                    <a href="https://www.youtube.com/results?search_query=Hogwarts+Legacy+trailer+oficial" target="_blank" rel="noopener noreferrer" class="enlace-trailer">Ver tráiler del juego</a>
+                    <a href="carrito.html" class="boton-producto agregar-carrito" data-id="hogwarts-legacy" data-nombre="Hogwarts Legacy" data-precio="189900" data-imagen="img/legacy.jpg" data-plataforma="Xbox">Agregar al carrito</a>
+                </div>
+            </article>
+        </section>
+        
+        <section class="ventana-juego" id="info-evil">
+            <a class="fondo-ventana" href="#catalogo" aria-label="Cerrar ventana"></a>
+            <article class="contenido-ventana">
+                <a class="cerrar-ventana" href="#catalogo" aria-label="Cerrar">×</a>
+                <img src="img/evil.jpg" alt="Resident Evil 4">
+                <div>
+                    <span class="etiqueta-plataforma">PlayStation 5</span>
+                    <h2>Resident Evil 4</h2>
+                    <p class="precio-ventana">$45.900 <del>$229.900</del></p>
+                    <p>Sobrevive a una misión peligrosa, resuelve misterios y enfréntate a amenazas en una aventura de terror.</p>
+                    <p><strong>Género:</strong> Terror y supervivencia.</p>
+                    <a href="https://www.youtube.com/results?search_query=Resident+Evil+4+remake+trailer+oficial" target="_blank" rel="noopener noreferrer" class="enlace-trailer">Ver tráiler del juego</a>
+                    <a href="carrito.html" class="boton-producto agregar-carrito" data-id="resident-evil-4" data-nombre="Resident Evil 4" data-precio="45900" data-imagen="img/evil.jpg" data-plataforma="PlayStation 5">Agregar al carrito</a>
+                </div>
+            </article>
+        </section>
+
+        <section class="ventana-juego" id="info-fc26">
+            <a class="fondo-ventana" href="#catalogo" aria-label="Cerrar ventana"></a>
+            <article class="contenido-ventana">
+                <a class="cerrar-ventana" href="#catalogo" aria-label="Cerrar">×</a>
+                <img src="img/fc26.jpg" alt="EA Sports FC 26">
+                <div>
+                    <span class="etiqueta-plataforma">PlayStation 5</span>
+                    <h2>EA Sports FC 26</h2>
+                    <p class="precio-ventana">$279.900</p>
+                    <p>Disfruta del fútbol con equipos, jugadores y modos de juego para competir en el campo.</p>
+                    <p><strong>Género:</strong> Deportes.</p>
+                    <a href="https://www.youtube.com/results?search_query=EA+Sports+FC+26+trailer+oficial" target="_blank" rel="noopener noreferrer" class="enlace-trailer">Ver tráiler del juego</a>
+                    <a href="carrito.html" class="boton-producto agregar-carrito" data-id="fc26" data-nombre="EA Sports FC 26" data-precio="279900" data-imagen="img/fc26.jpg" data-plataforma="PlayStation 5">Agregar al carrito</a>
+                </div>
+            </article>
+        </section>
+
+        <section class="ventana-juego" id="info-ops7">
+            <a class="fondo-ventana" href="#catalogo" aria-label="Cerrar ventana"></a>
+            <article class="contenido-ventana">
+                <a class="cerrar-ventana" href="#catalogo" aria-label="Cerrar">×</a>
+                <img src="img/ops7.jpg" alt="Call of Duty: Black Ops 7">
+                <div>
+                    <span class="etiqueta-plataforma">Xbox</span>
+                    <h2>Call of Duty: Black Ops 7</h2>
+                    <p class="precio-ventana">$299.900</p>
+                    <p>Enfréntate a misiones de acción y combate en una experiencia de disparos intensa.</p>
+                    <p><strong>Género:</strong> Acción y disparos.</p>
+                    <a href="https://www.youtube.com/results?search_query=Call+of+Duty+Black+Ops+7+trailer+oficial" target="_blank" rel="noopener noreferrer" class="enlace-trailer">Ver tráiler del juego</a>
+                    <a href="carrito.html" class="boton-producto agregar-carrito" data-id="black-ops-7" data-nombre="Call of Duty: Black Ops 7" data-precio="299900" data-imagen="img/ops7.jpg" data-plataforma="Xbox">Agregar al carrito</a>
+                </div>
+            </article>
+        </section>
+
+        <section class="ventana-juego" id="info-donkey">
+            <a class="fondo-ventana" href="#catalogo" aria-label="Cerrar ventana"></a>
+            <article class="contenido-ventana">
+                <a class="cerrar-ventana" href="#catalogo" aria-label="Cerrar">×</a>
+                <img src="img/donkey.jpg" alt="Donkey Kong Bananza">
+                <div>
+                    <span class="etiqueta-plataforma">Nintendo Switch</span>
+                    <h2>Donkey Kong Bananza</h2>
+                    <p class="precio-ventana">$259.900</p>
+                    <p>Acompaña a Donkey Kong en una aventura de exploración, plataformas y desafíos.</p>
+                    <p><strong>Género:</strong> Plataformas y aventura.</p>
+                    <a href="https://www.youtube.com/results?search_query=Donkey+Kong+Bananza+trailer+oficial" target="_blank" rel="noopener noreferrer" class="enlace-trailer">Ver tráiler del juego</a>
+                    <a href="carrito.html" class="boton-producto agregar-carrito" data-id="donkey-kong-bananza" data-nombre="Donkey Kong Bananza" data-precio="259900" data-imagen="img/donkey.jpg" data-plataforma="Nintendo Switch">Agregar al carrito</a>
+                </div>
+            </article>
+        </section>
+
+        <section class="ventana-juego" id="info-bot">
+            <a class="fondo-ventana" href="#catalogo" aria-label="Cerrar ventana"></a>
+            <article class="contenido-ventana">
+                <a class="cerrar-ventana" href="#catalogo" aria-label="Cerrar">×</a>
+                <img src="img/bot.jpg" alt="Astro Bot">
+                <div>
+                    <span class="etiqueta-plataforma">PlayStation 5</span>
+                    <h2>Astro Bot</h2>
+                    <p class="precio-ventana">$199.900 <del>$249.900</del></p>
+                    <p>Embárcate en una aventura de plataformas llena de desafíos, mundos coloridos y secretos.</p>
+                    <p><strong>Género:</strong> Plataformas y aventura.</p>
+                    <a href="https://www.youtube.com/results?search_query=Astro+Bot+trailer+oficial" target="_blank" rel="noopener noreferrer" class="enlace-trailer">Ver tráiler del juego</a>
+                    <a href="carrito.html" class="boton-producto agregar-carrito" data-id="astro-bot" data-nombre="Astro Bot" data-precio="199900" data-imagen="img/bot.jpg" data-plataforma="PlayStation 5">Agregar al carrito</a>
+                </div>
+            </article>
+        </section>
+
+        <section class="ventana-juego" id="info-minecraft">
+            <a class="fondo-ventana" href="#catalogo" aria-label="Cerrar ventana"></a>
+            <article class="contenido-ventana">
+                <a class="cerrar-ventana" href="#catalogo" aria-label="Cerrar">×</a>
+                <img src="img/minecraft.jpg" alt="Minecraft">
+                <div>
+                    <span class="etiqueta-plataforma">Nintendo Switch</span>
+                    <h2>Minecraft</h2>
+                    <p class="precio-ventana">$119.900</p>
+                    <p>Construye, explora y crea tus propios mundos en una aventura que combina creatividad y supervivencia.</p>
+                    <p><strong>Género:</strong> Creatividad y aventura.</p>
+                    <a href="https://www.youtube.com/results?search_query=Minecraft+trailer+oficial" target="_blank" rel="noopener noreferrer" class="enlace-trailer">Ver tráiler del juego</a>
+                    <a href="carrito.html" class="boton-producto agregar-carrito" data-id="minecraft" data-nombre="Minecraft" data-precio="119900" data-imagen="img/minecraft.jpg" data-plataforma="Nintendo Switch">Agregar al carrito</a>
+                </div>
+            </article>
+        </section>
+
+        <section class="ventana-juego" id="info-pokemon">
+            <a class="fondo-ventana" href="#catalogo" aria-label="Cerrar ventana"></a>
+            <article class="contenido-ventana">
+                <a class="cerrar-ventana" href="#catalogo" aria-label="Cerrar">×</a>
+                <img src="img/pokemon.jpg" alt="Pokémon Legends: Z-A">
+                <div>
+                    <span class="etiqueta-plataforma">Nintendo Switch</span>
+                    <h2>Pokémon Legends: Z-A</h2>
+                    <p class="precio-ventana">$249.900</p>
+                    <p>Descubre una nueva aventura Pokémon con exploración, combates y misterios por resolver.</p>
+                    <p><strong>Género:</strong> Rol y aventura.</p>
+                    <a href="https://www.youtube.com/results?search_query=Pokemon+Legends+Z-A+trailer+oficial" target="_blank" rel="noopener noreferrer" class="enlace-trailer">Ver tráiler del juego</a>
+                    <a href="carrito.html" class="boton-producto agregar-carrito" data-id="pokemon-legends-za" data-nombre="Pokémon Legends: Z-A" data-precio="249900" data-imagen="img/pokemon.jpg" data-plataforma="Nintendo Switch">Agregar al carrito</a>
+                </div>
+            </article>
+        </section>
+
+        <section class="ventana-juego" id="info-hill2">
+            <a class="fondo-ventana" href="#catalogo" aria-label="Cerrar ventana"></a>
+            <article class="contenido-ventana">
+                <a class="cerrar-ventana" href="#catalogo" aria-label="Cerrar">×</a>
+                <img src="img/hill2.jpg" alt="Silent Hill 2">
+                <div>
+                    <span class="etiqueta-plataforma">PlayStation 5</span>
+                    <h2>Silent Hill 2</h2>
+                    <p class="precio-ventana">$189.900 <del>$239.900</del></p>
+                    <p>Adéntrate en una ciudad misteriosa y acompaña a James en una historia de terror, secretos y supervivencia.</p>
+                    <p><strong>Género:</strong> Terror y supervivencia.</p>
+                    <a href="https://www.youtube.com/results?search_query=Silent+Hill+2+remake+trailer+oficial" target="_blank" rel="noopener noreferrer" class="enlace-trailer">Ver tráiler del juego</a>
+                    <a href="carrito.html" class="boton-producto agregar-carrito" data-id="silent-hill-2" data-nombre="Silent Hill 2" data-precio="189900" data-imagen="img/hill2.jpg" data-plataforma="PlayStation 5">Agregar al carrito</a>
+                </div>
+            </article>
+        </section>
+
+        <section class="ventana-juego" id="info-sonic">
+            <a class="fondo-ventana" href="#catalogo" aria-label="Cerrar ventana"></a>
+            <article class="contenido-ventana">
+                <a class="cerrar-ventana" href="#catalogo" aria-label="Cerrar">×</a>
+                <img src="img/sonic.jpg" alt="Sonic X Shadow Generations">
+                <div>
+                    <span class="etiqueta-plataforma">Nintendo Switch</span>
+                    <h2>Sonic X Shadow Generations</h2>
+                    <p class="precio-ventana">$159.900 <del>$199.900</del></p>
+                    <p>Corre a toda velocidad con Sonic y Shadow en niveles llenos de acción, obstáculos y desafíos.</p>
+                    <p><strong>Género:</strong> Acción y plataformas.</p>
+                    <a href="https://www.youtube.com/results?search_query=Sonic+X+Shadow+Generations+trailer+oficial" target="_blank" rel="noopener noreferrer" class="enlace-trailer">Ver tráiler del juego</a>
+                    <a href="carrito.html" class="boton-producto agregar-carrito" data-id="sonic-shadow-generations" data-nombre="Sonic X Shadow Generations" data-precio="159900" data-imagen="img/sonic.jpg" data-plataforma="Nintendo Switch">Agregar al carrito</a>
+                </div>
+            </article>
+        </section>
+
+        <section class="ventana-juego" id="info-cyberpunk">
+            <a class="fondo-ventana" href="#catalogo" aria-label="Cerrar ventana"></a>
+            <article class="contenido-ventana">
+                <a class="cerrar-ventana" href="#catalogo" aria-label="Cerrar">×</a>
+                <img src="img/cyberpunk.jpg" alt="Cyberpunk 2077">
+                <div>
+                    <span class="etiqueta-plataforma">Xbox</span>
+                    <h2>Cyberpunk 2077</h2>
+                    <p class="precio-ventana">$169.900 <del>$219.900</del></p>
+                    <p>Explora Night City en una aventura futurista donde tus decisiones influyen en tu camino como mercenario.</p>
+                    <p><strong>Género:</strong> Rol y mundo abierto.</p>
+                    <a href="https://www.youtube.com/results?search_query=Cyberpunk+2077+trailer+oficial" target="_blank" rel="noopener noreferrer" class="enlace-trailer">Ver tráiler del juego</a>
+                    <a href="carrito.html" class="boton-producto agregar-carrito" data-id="cyberpunk-2077" data-nombre="Cyberpunk 2077" data-precio="169900" data-imagen="img/cyberpunk.jpg" data-plataforma="Xbox">Agregar al carrito</a>
+                </div>
+            </article>
+        </section>
+
+    </main>
+
+    <footer class="pie-pagina">
+        <a href="index.html" class="logo-pie">Hazard<span>Game</span></a>
+        <p>Tu próxima aventura comienza aquí.</p>
+        <p class="copyright">© 2026 HazardGame.</p>
+    </footer>
+
+</body>
+</html>

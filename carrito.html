@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#03030b">
+
+    <title>Carrito de compras | HazardGame</title>
+
+    <link rel="stylesheet" href="carrito.css">
+    <script src="carrito.js" defer></script>
+</head>
+<body>
+
+    <header class="encabezado">
+        <a href="index.html" class="logo">
+            <img src="img/icono.png" alt="HazardGame" class="logo-icono">
+        </a>
+
+        <nav class="menu">
+            <a href="index.html">Inicio</a>
+            <a href="tienda.html">Tienda</a>
+            <a href="contacto.html">Contacto</a>
+        </nav>
+
+        <div class="acciones">
+            <a href="inicio-sesion.html" class="enlace-sesion">
+                Mi cuenta
+            </a>
+
+            <a href="carrito.html" class="enlace-carrito activo">
+                Carrito 🛒 
+                <span class="contador" id="contador-carrito">0</span>
+            </a>
+        </div>
+    </header>
+
+    <main class="contenedor">
+
+        <section class="titulo-pagina">
+            <p class="etiqueta">HAZARDGAME STORE</p>
+
+            <h1>
+                Tu <span>carrito</span> de compras
+            </h1>
+
+            
+        </section>
+
+        
+
+        <section class="contenido-carrito">
+
+            <div class="panel-productos">
+
+                <div class="cabecera-productos">
+                    <div>
+                        <h2>Productos seleccionados</h2>
+                        <p id="texto-cantidad">0 productos en tu carrito</p>
+                    </div>
+
+                    <button
+                        type="button"
+                        id="vaciar-carrito"
+                        class="boton-vaciar">
+                        Vaciar carrito
+                    </button>
+                </div>
+
+                <div id="lista-carrito" class="lista-carrito"></div>
+
+                <div id="carrito-vacio" class="carrito-vacio" hidden>
+                    <div class="icono-vacio">HG</div>
+
+                    <h2>Tu carrito está vacío</h2>
+
+                    <p>
+                        Todavía no has agregado ningún juego.
+                        Explora nuestra tienda y encuentra tu próximo favorito.
+                    </p>
+
+                    <a href="tienda.html" class="boton-principal">
+                        Explorar juegos
+                    </a>
+                </div>
+
+                <div class="pie-productos">
+                    <a href="tienda.html" class="volver-tienda">
+                        ← Seguir comprando
+                    </a>
+                </div>
+
+            </div>
+
+            <aside class="resumen">
+
+                <h2>Resumen de compra</h2>
+
+                <div class="resumen-linea">
+                    <span>Productos</span>
+                    <span id="resumen-cantidad">0</span>
+                </div>
+
+                <div class="resumen-linea">
+                    <span>Subtotal</span>
+                    <span id="subtotal">$0</span>
+                </div>
+
+                <div class="resumen-linea">
+                    <span>Envío</span>
+                    <span class="envio-gratis">Por confirmar</span>
+                </div>
+
+                <div class="separador"></div>
+
+                <div class="resumen-total">
+                    <span>Total</span>
+                    <span id="total">$0</span>
+                </div>
+
+                <p class="nota-resumen">
+                    El costo de envío y la disponibilidad se confirmarán
+                    antes de finalizar la compra.
+                </p>
+
+                <button
+                    type="button"
+                    id="finalizar-compra"
+                    class="boton-finalizar"
+                    disabled>
+                    Continuar con la compra
+                </button>
+
+                <div class="compra-segura">
+                    <span class="icono-seguro">✓</span>
+
+                    <div>
+                        <strong>Compra segura</strong>
+                        <p>
+                            Revisa tus productos antes de continuar.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="metodos-pago">
+                    <p>MÉTODOS DE PAGO</p>
+
+                    <div class="etiquetas-pago">
+                        <span>Tarjeta</span>
+                        <span>PSE</span>
+                        <span>Transferencia</span>
+                    </div>
+                </div>
+
+            </aside>
+
+        </section>
+
+        <section class="recomendacion">
+            <p class="etiqueta">SIGUE EXPLORANDO</p>
+
+            <h2>¿Buscas otra aventura?</h2>
+
+            <p>
+                Descubre más títulos disponibles en HazardGame.
+            </p>
+
+            <a href="tienda.html" class="boton-secundario">
+                Ver todos los juegos
+            </a>
+        </section>
+
+    </main>
+
+    <footer class="pie-pagina">
+        <a href="inicio.html" class="logo-pie">
+            Hazard<span>Game</span>
+        </a>
+
+        <p>Tu próxima aventura comienza aquí.</p>
+
+        <p class="copyright">
+            © 2026 HazardGame. Proyecto académico.
+        </p>
+    </footer>
+
+</body>
+</html>

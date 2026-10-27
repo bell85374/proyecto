@@ -1,0 +1,572 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HazardGame | Tienda Gamer</title>
+    <link rel="stylesheet" href="estilos.css">
+    <link rel="icon" type="image/png" href="img/logo.png">
+    <script src="carrito.js" defer></script>
+</head>
+<body id="inicio">
+
+    <header class="encabezado">
+        <a href="inicio.html" class="logo" aria-label="HazardGame - Inicio">
+            <img src="img/icono.png" alt="HazardGame" class="logo-icono">
+        </a>
+
+        <nav class="menu" aria-label="Navegación principal">
+            <a href="inicio.html" class="activo">Inicio</a>
+            <a href="tienda.html">Tienda</a>
+            <a href="contacto.html">Contacto</a>
+        </nav>
+
+        <form class="buscador" action="tienda.html" method="get">
+            <button type="submit" aria-label="Buscar juegos">⌕</button>
+            <input type="search" name="buscar" placeholder="Buscar juegos..." aria-label="Buscar juegos">
+        </form>
+
+        <section class="ventana-sesion" id="ventana-sesion">
+            <a href="#inicio" class="fondo-sesion" aria-label="Cerrar ventana"></a>
+
+            <div class="contenido-sesion">
+                <a href="#inicio" class="cerrar-sesion" aria-label="Cerrar">×</a>
+
+                <img src="img/icono.png" alt="HazardGame" class="logo-sesion">
+
+                <h2>Bienvenido a <span>HazardGame</span></h2>
+                <p>Inicia sesión para continuar</p>
+
+                <form action="#" method="get">
+                    <label for="correo-sesion">Correo electrónico</label>
+                    <input
+                        type="email"
+                        id="correo-sesion"
+                        name="correo"
+                        placeholder="ejemplo@correo.com"
+                        required
+                    >
+
+                    <label for="contrasena-sesion">Contraseña</label>
+                    <input
+                        type="password"
+                        id="contrasena-sesion"
+                        name="contrasena"
+                        placeholder="Ingresa tu contraseña"
+                        required
+                    >
+
+                    <button type="submit" class="boton-sesion">Iniciar sesión</button>
+                </form>
+                
+                <p class="registro-sesion">
+                    ¿No tienes una cuenta?
+                    <a href="inicio-sesion.html">Regístrate aquí</a>
+                </p>
+            </div>
+        </section>
+
+        <a href="#ventana-sesion" class="sesion">
+            <span class="icono-usuario" aria-hidden="true">♙</span>
+            <span>Iniciar sesión</span>
+        </a>
+
+        <a href="carrito.html" class="carrito" aria-label="Ver carrito">
+            <span class="icono-carrito" aria-hidden="true">🛒</span>
+            <span class="contador" id="contador-carrito">0</span>
+        </a>
+    </header>
+
+    <main>
+
+        <section class="zona-carrusel" aria-label="Promociones">
+
+            <a href="tienda.html?categoria=ofertas" class="banner-lateral izquierda">
+                <img src="img/plom1.jpg" alt="Ofertas de videojuegos">
+            </a>
+
+            <section class="carrusel" aria-label="Carrusel de videojuegos">
+
+                <input type="radio" name="slide" id="slide1" checked>
+                <input type="radio" name="slide" id="slide2">
+                <input type="radio" name="slide" id="slide3">
+                <input type="radio" name="slide" id="slide4">
+                <input type="radio" name="slide" id="slide5">
+
+                <div class="diapositivas">
+                    <a href="tienda.html?categoria=ofertas" class="diapositiva">
+                        <img src="img/banner1.jpg" alt="Ofertas de videojuegos">
+                    </a>
+
+                    <a href="tienda.html?categoria=novedades" class="diapositiva">
+                        <img src="img/banner2.jpg" alt="Novedades de videojuegos">
+                    </a>
+
+                    <a href="tienda.html?categoria=switch" class="diapositiva">
+                        <img src="img/banner3.jpg" alt="Juegos de Nintendo Switch">
+                    </a>
+
+                    <a href="tienda.html?categoria=xbox" class="diapositiva">
+                        <img src="img/banner4.jpg" alt="Juegos de Xbox">
+                    </a>
+
+                    <a href="tienda.html?categoria=playstation" class="diapositiva">
+                        <img src="img/banner5.jpg" alt="Juegos de PlayStation">
+                    </a>
+                </div>
+
+                <div class="indicadores" aria-label="Elegir imagen">
+                    <label for="slide1" aria-label="Imagen 1"></label>
+                    <label for="slide2" aria-label="Imagen 2"></label>
+                    <label for="slide3" aria-label="Imagen 3"></label>
+                    <label for="slide4" aria-label="Imagen 4"></label>
+                    <label for="slide5" aria-label="Imagen 5"></label>
+                </div>
+            </section>
+
+            <a href="tienda.html?categoria=novedades" class="banner-lateral derecha">
+                <img src="img/plom2.jpg" alt="Novedades y juegos increíbles">
+            </a>
+
+        </section>
+
+        <section class="beneficios">
+            <article class="beneficio">
+                <span class="icono-beneficio">♧</span>
+                <div>
+                    <h3>Envíos seguros</h3>
+                    <p>Recibe tus pedidos con confianza.</p>
+                </div>
+            </article>
+
+            <article class="beneficio">
+                <span class="icono-beneficio">♢</span>
+                <div>
+                    <h3>Pagos protegidos</h3>
+                    <p>Compra de forma segura y confiable.</p>
+                </div>
+            </article>
+
+            <article class="beneficio">
+                <span class="icono-beneficio">✧</span>
+                <div>
+                    <h3>Ofertas especiales</h3>
+                    <p>Grandes juegos a mejores precios.</p>
+                </div>
+            </article>
+
+            <article class="beneficio">
+                <span class="icono-beneficio">◉</span>
+                <div>
+                    <h3>Atención al cliente</h3>
+                    <p>Estamos aquí para ayudarte.</p>
+                </div>
+            </article>
+        </section>
+
+        <section class="destacados" id="catalogo">
+            <div class="titulo-destacados">
+                <h2>Juegos <span>populares</span></h2>
+                <a href="tienda.html#catalogo">Ver más</a>
+            </div>
+
+            <div class="productos">
+
+                <article class="producto">
+                    <a href="#info-marvel" class="enlace-detalle">
+                        <div class="imagen-producto">
+                            <span class="descuento">-40%</span>
+                            <img src="img/marvel.jpg" alt="Marvel's Spider-Man 2">
+                        </div>
+                        <h3>Marvel's Spider-Man 2</h3>
+                    </a>
+
+                    <p class="plataforma">♧ PlayStation 5</p>
+                    <div class="precios">
+                        <del>$299.900</del>
+                        <strong>$179.940</strong>
+                    </div>
+                    
+                    <a
+                        href="carrito.html"
+                        class="boton-producto agregar-carrito"
+                        data-id="spiderman2"
+                        data-nombre="Marvel's Spider-Man 2"
+                        data-precio="179940"
+                        data-imagen="img/marvel.jpg"
+                        data-plataforma="PS5"
+                    >Agregar al carrito</a>
+                </article>
+
+                <article class="producto">
+                    <a href="#info-zelda" class="enlace-detalle">
+                        <div class="imagen-producto">
+                            <span class="descuento">-12%</span>
+                            <img src="img/zelda.jpg" alt="The Legend of Zelda: Tears of the Kingdom">
+                        </div>
+                        <h3>The Legend of Zelda: Tears of the Kingdom</h3>
+                    </a>
+
+                    <p class="plataforma">◉ Nintendo Switch</p>
+                    <div class="precios">
+                        <del>$279.900</del>
+                        <strong>$244.900</strong>
+                    </div>
+
+                    <a
+                        href="carrito.html"
+                        class="boton-producto agregar-carrito"
+                        data-id="zelda-totk"
+                        data-nombre="The Legend of Zelda: Tears of the Kingdom"
+                        data-precio="244900"
+                        data-imagen="img/zelda.jpg"
+                        data-plataforma="Nintendo Switch"
+                    >Agregar al carrito</a>
+                </article>
+
+                <article class="producto">
+                    <a href="#info-starfield" class="enlace-detalle">
+                        <div class="imagen-producto">
+                            <span class="descuento">-10%</span>
+                            <img src="img/star.jpg" alt="Starfield">
+                        </div>
+                        <h3>Starfield</h3>
+                    </a>
+
+                    <p class="plataforma">◉ Xbox Series X|S</p>
+                    <div class="precios">
+                        <del>$249.900</del>
+                        <strong>$224.900</strong>
+                    </div>
+
+                    <a
+                        href="carrito.html"
+                        class="boton-producto agregar-carrito"
+                        data-id="starfield"
+                        data-nombre="Starfield"
+                        data-precio="224900"
+                        data-imagen="img/star.jpg"
+                        data-plataforma="Xbox Series X|S"
+                    >Agregar al carrito</a>
+                </article>
+
+                <article class="producto">
+                    <a href="#info-fantasy" class="enlace-detalle">
+                        <div class="imagen-producto">
+                            <span class="descuento">-15%</span>
+                            <img src="img/fantasy.jpg" alt="Final Fantasy XVI">
+                        </div>
+                        <h3>Final Fantasy XVI</h3>
+                    </a>
+
+                    <p class="plataforma">♧ PlayStation 5</p>
+                    <div class="precios">
+                        <del>$259.900</del>
+                        <strong>$219.900</strong>
+                    </div>
+
+                    <a
+                        href="carrito.html"
+                        class="boton-producto agregar-carrito"
+                        data-id="final-fantasy-xvi"
+                        data-nombre="Final Fantasy XVI"
+                        data-precio="219900"
+                        data-imagen="img/fantasy.jpg"
+                        data-plataforma="PS5"
+                    >Agregar al carrito</a>
+                </article>
+
+                <article class="producto">
+                    <a href="#info-mario" class="enlace-detalle">
+                        <div class="imagen-producto">
+                            <span class="descuento">-10%</span>
+                            <img src="img/mario.jpg" alt="Super Mario Bros. Wonder">
+                        </div>
+                        <h3>Super Mario Bros. Wonder</h3>
+                    </a>
+
+                    <p class="plataforma">◉ Nintendo Switch</p>
+                    <div class="precios">
+                        <del>$249.900</del>
+                        <strong>$224.900</strong>
+                    </div>
+
+                    <a
+                        href="carrito.html"
+                        class="boton-producto agregar-carrito"
+                        data-id="mario-wonder"
+                        data-nombre="Super Mario Bros. Wonder"
+                        data-precio="224900"
+                        data-imagen="img/mario.jpg"
+                        data-plataforma="Nintendo Switch"
+                    >Agregar al carrito</a>
+                </article>
+
+                <article class="producto">
+                    <a href="#info-forza" class="enlace-detalle">
+                        <div class="imagen-producto">
+                            <span class="descuento">-12%</span>
+                            <img src="img/forza.jpg" alt="Forza Horizon 5">
+                        </div>
+                        <h3>Forza Horizon 5</h3>
+                    </a>
+
+                    <p class="plataforma">◉ Xbox Series X|S</p>
+                    <div class="precios">
+                        <del>$249.900</del>
+                        <strong>$219.900</strong>
+                    </div>
+
+                    <a
+                        href="carrito.html"
+                        class="boton-producto agregar-carrito"
+                        data-id="forza-horizon-5"
+                        data-nombre="Forza Horizon 5"
+                        data-precio="219900"
+                        data-imagen="img/forza.jpg"
+                        data-plataforma="Xbox Series X|S"
+                    >Agregar al carrito</a>
+                </article>
+
+            </div>
+        </section>
+
+    </main>
+
+    <section class="seccion-comentarios" id="comentarios">
+        <div class="encabezado-comentarios">
+            <h2>Opiniones de <span>jugadores</span></h2>
+            <p>Cuéntanos tu experiencia con HazardGame.</p>
+        </div>
+
+        <div class="contenedor-comentarios">
+            <form class="formulario-comentario" action="#comentarios" method="get">
+                <h3>Deja tu comentario</h3>
+
+                <label for="nombre-comentario">Tu nombre</label>
+                <input
+                    type="text"
+                    id="nombre-comentario"
+                    name="nombre"
+                    maxlength="40"
+                    placeholder="Escribe tu nombre"
+                    required
+                >
+
+                <label for="calificacion">Tu calificación</label>
+                <select id="calificacion" name="calificacion" required>
+                    <option value="">Selecciona una calificación</option>
+                    <option value="5">5 estrellas</option>
+                    <option value="4">4 estrellas</option>
+                    <option value="3">3 estrellas</option>
+                    <option value="2">2 estrellas</option>
+                    <option value="1">1 estrella</option>
+                </select>
+                
+                <label for="texto-comentario">Tu opinión</label>
+                <textarea
+                    id="texto-comentario"
+                    name="comentario"
+                    rows="4"
+                    maxlength="500"
+                    placeholder="¿Qué te parece nuestra tienda?"
+                    required
+                ></textarea>
+
+                <button type="submit" class="boton-comentar">Enviar comentario</button>
+
+                <p class="aviso-comentarios">
+                    Este formulario es visual. Para publicar y guardar comentarios
+                    se necesita programación adicional o un servicio de formularios.
+                </p>
+            </form>
+
+            <div class="lista-comentarios">
+                <div class="titulo-lista-comentarios">
+                    <h3>Lo que dicen nuestros jugadores</h3>
+                </div>
+
+                <p class="sin-comentarios">
+                    Las opiniones aparecerán aquí cuando se conecte un sistema
+                    para recibir comentarios.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <section class="ventana-juego" id="info-marvel">
+        <a class="fondo-ventana" href="#catalogo" aria-label="Cerrar ventana"></a>
+
+        <article class="contenido-ventana">
+            <a class="cerrar-ventana" href="#catalogo" aria-label="Cerrar">×</a>
+            <img src="img/marvel.jpg" alt="Marvel's Spider-Man 2">
+
+            <div>
+                <span class="etiqueta-plataforma">PlayStation 5</span>
+                <h2>Marvel's Spider-Man 2</h2>
+                <p class="precio-ventana">$179.940 <del>$299.900</del></p>
+                <p>Vive una aventura de acción en mundo abierto con Peter Parker y Miles Morales mientras protegen Nueva York de nuevas amenazas.</p>
+                <p><strong>Género:</strong> Acción y aventura.</p>
+
+                <a href="https://www.youtube.com/results?search_query=Marvels+Spider-Man+2+trailer+oficial" target="_blank" rel="noopener noreferrer" class="enlace-trailer">Ver tráiler del juego</a>
+
+                <a
+                    href="carrito.html"
+                    class="boton-producto agregar-carrito"
+                    data-id="spiderman2"
+                    data-nombre="Marvel's Spider-Man 2"
+                    data-precio="179940"
+                    data-imagen="img/marvel.jpg"
+                    data-plataforma="PS5"
+                >Agregar al carrito</a>
+            </div>
+        </article>
+    </section>
+
+    <section class="ventana-juego" id="info-zelda">
+        <a class="fondo-ventana" href="#catalogo" aria-label="Cerrar ventana"></a>
+
+        <article class="contenido-ventana">
+            <a class="cerrar-ventana" href="#catalogo" aria-label="Cerrar">×</a>
+            <img src="img/zelda.jpg" alt="The Legend of Zelda: Tears of the Kingdom">
+
+            <div>
+                <span class="etiqueta-plataforma">Nintendo Switch</span>
+                <h2>The Legend of Zelda: Tears of the Kingdom</h2>
+                <p class="precio-ventana">$244.900 <del>$279.900</del></p>
+                <p>Explora Hyrule y las islas del cielo, resuelve acertijos y descubre nuevas formas de recorrer el mundo en esta aventura de Link.</p>
+                <p><strong>Género:</strong> Aventura y exploración.</p>
+
+                <a href="https://www.youtube.com/results?search_query=Zelda+Tears+of+the+Kingdom+trailer+oficial" target="_blank" rel="noopener noreferrer" class="enlace-trailer">Ver tráiler del juego</a>
+
+                <a
+                    href="carrito.html"
+                    class="boton-producto agregar-carrito"
+                    data-id="zelda-totk"
+                    data-nombre="The Legend of Zelda: Tears of the Kingdom"
+                    data-precio="244900"
+                    data-imagen="img/zelda.jpg"
+                    data-plataforma="Nintendo Switch"
+                >Agregar al carrito</a>
+            </div>
+        </article>
+    </section>
+
+    <section class="ventana-juego" id="info-starfield">
+        <a class="fondo-ventana" href="#catalogo" aria-label="Cerrar ventana"></a>
+
+        <article class="contenido-ventana">
+            <a class="cerrar-ventana" href="#catalogo" aria-label="Cerrar">×</a>
+            <img src="img/star.jpg" alt="Starfield">
+
+            <div>
+                <span class="etiqueta-plataforma">Xbox Series X|S</span>
+                <h2>Starfield</h2>
+                <p class="precio-ventana">$224.900 <del>$249.900</del></p>
+                <p>Viaja por el espacio, explora planetas y crea tu propia historia en un juego de rol ambientado en una amplia galaxia.</p>
+                <p><strong>Género:</strong> Rol y exploración espacial.</p>
+
+                <a href="https://www.youtube.com/results?search_query=Starfield+trailer+oficial" target="_blank" rel="noopener noreferrer" class="enlace-trailer">Ver tráiler del juego</a>
+
+                <a
+                    href="carrito.html"
+                    class="boton-producto agregar-carrito"
+                    data-id="starfield"
+                    data-nombre="Starfield"
+                    data-precio="224900"
+                    data-imagen="img/star.jpg"
+                    data-plataforma="Xbox Series X|S"
+                >Agregar al carrito</a>
+            </div>
+        </article>
+    </section>
+    
+    <section class="ventana-juego" id="info-fantasy">
+        <a class="fondo-ventana" href="#catalogo" aria-label="Cerrar ventana"></a>
+
+        <article class="contenido-ventana">
+            <a class="cerrar-ventana" href="#catalogo" aria-label="Cerrar">×</a>
+            <img src="img/fantasy.jpg" alt="Final Fantasy XVI">
+
+            <div>
+                <span class="etiqueta-plataforma">PlayStation 5</span>
+                <h2>Final Fantasy XVI</h2>
+                <p class="precio-ventana">$219.900 <del>$259.900</del></p>
+                <p>Embárcate en una aventura de fantasía con combates dinámicos, poderosos Eikons y una historia marcada por conflictos entre reinos.</p>
+                <p><strong>Género:</strong> Rol y acción.</p>
+
+                <a href="https://www.youtube.com/results?search_query=Final+Fantasy+XVI+trailer+oficial" target="_blank" rel="noopener noreferrer" class="enlace-trailer">Ver tráiler del juego</a>
+
+                <a
+                    href="carrito.html"
+                    class="boton-producto agregar-carrito"
+                    data-id="final-fantasy-xvi"
+                    data-nombre="Final Fantasy XVI"
+                    data-precio="219900"
+                    data-imagen="img/fantasy.jpg"
+                    data-plataforma="PS5"
+                >Agregar al carrito</a>
+            </div>
+        </article>
+    </section>
+
+    <section class="ventana-juego" id="info-mario">
+        <a class="fondo-ventana" href="#catalogo" aria-label="Cerrar ventana"></a>
+
+        <article class="contenido-ventana">
+            <a class="cerrar-ventana" href="#catalogo" aria-label="Cerrar">×</a>
+            <img src="img/mario.jpg" alt="Super Mario Bros. Wonder">
+
+            <div>
+                <span class="etiqueta-plataforma">Nintendo Switch</span>
+                <h2>Super Mario Bros. Wonder</h2>
+                <p class="precio-ventana">$224.900 <del>$249.900</del></p>
+                <p>Acompaña a Mario y sus amigos en niveles llenos de sorpresas, transformaciones y desafíos para jugar en solitario o con amigos.</p>
+                <p><strong>Género:</strong> Plataformas y aventura.</p>
+
+                <a href="https://www.youtube.com/results?search_query=Super+Mario+Bros+Wonder+trailer+oficial" target="_blank" rel="noopener noreferrer" class="enlace-trailer">Ver tráiler del juego</a>
+
+                <a
+                    href="carrito.html"
+                    class="boton-producto agregar-carrito"
+                    data-id="mario-wonder"
+                    data-nombre="Super Mario Bros. Wonder"
+                    data-precio="224900"
+                    data-imagen="img/mario.jpg"
+                    data-plataforma="Nintendo Switch"
+                >Agregar al carrito</a>
+            </div>
+        </article>
+    </section>
+
+    <section class="ventana-juego" id="info-forza">
+        <a class="fondo-ventana" href="#catalogo" aria-label="Cerrar ventana"></a>
+
+        <article class="contenido-ventana">
+            <a class="cerrar-ventana" href="#catalogo" aria-label="Cerrar">×</a>
+            <img src="img/forza.jpg" alt="Forza Horizon 5">
+
+            <div>
+                <span class="etiqueta-plataforma">Xbox Series X|S</span>
+                <h2>Forza Horizon 5</h2>
+                <p class="precio-ventana">$219.900 <del>$249.900</del></p>
+                <p>Conduce una gran variedad de vehículos por paisajes inspirados en México y participa en carreras y desafíos de mundo abierto.</p>
+                <p><strong>Género:</strong> Carreras.</p>
+
+                <a href="https://www.youtube.com/results?search_query=Forza+Horizon+5+trailer+oficial" target="_blank" rel="noopener noreferrer" class="enlace-trailer">Ver tráiler del juego</a>
+
+                <a
+                    href="carrito.html"
+                    class="boton-producto agregar-carrito"
+                    data-id="forza-horizon-5"
+                    data-nombre="Forza Horizon 5"
+                    data-precio="219900"
+                    data-imagen="img/forza.jpg"
+                    data-plataforma="Xbox Series X|S"
+                >Agregar al carrito</a>
+            </div>
+        </article>
+    </section>
+
+</body>
+</html>
